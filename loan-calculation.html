@@ -24,33 +24,50 @@
 
        <h3>Loan Calculation</h3>
        <hr>
-        <form id="form">
-            <label>Propertie type: </label>
-            <select name="propertie" id="" class="form-control col-md-4">
-                <option value="house">House</option>
-                <option value="house">Condo</option>
-                <option value="house">Duplex</option>
-            </select>
-            <label>Loan amount: </label>
-            <input type="text" name="amount" class="form-control col-md-4">
-            <label>Number of years: </label>
-            <input type="text" name="years" class="form-control col-md-4">
-            <label>Interest rate: </label>
-            <input type="email" name="rate" class="form-control col-md-4">
-            <label>Monthly Payment: </label>
-            <input type="text" name="monthly" class="form-control col-md-4">
-            <label>Total Payment: </label>
-            <input type="text" name="senha" class="form-control col-md-4">
-            <br>
-            <input type="reset" value="Reset form" class="btn btn-outline-secondary">
-            <input type="submit" value="Send" class="btn btn-outline-danger">
-        </form><br>
-        <div class="clear">
+
+        <form class="loan-validation" novalidate>
+            <div class="col-md-6 mb-3">
+                <label for="loan">Loan amount: <span class="red">*</span></label>
+                <input type="text" class="form-control" id="loan" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid loan amount.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="years">Number of years: <span class="red">*</span></label>
+                <input type="text" class="form-control" id="years" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid number of years.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="rate">Interest rate: <span class="red">*</span></label>
+                <input type="text" class="form-control" id="rate" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid interest rate.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Monthly Payment:</label>
+                <input type="text" class="form-control" id="monthly">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Total Payment:</label>
+                <input type="text" class="form-control" id="total">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input class="btn btn-outline-secondary" onclick="reiniciaLoan()" type="reset" value="Reset form">
+                <button class="btn btn-outline-danger" onclick="validLoan()" type="button">Submit form</button>
+            </div>
+        </form>
+        <br>
+        <div class="clear col-md-6 mb-3">
             <button class="btn btn-outline-primary"><a class="link" href="index.html">Back Home</a></button>
         </div>
         <footer id="rodape">
             Belle Maison - All rigths reserved
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

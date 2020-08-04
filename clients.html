@@ -27,19 +27,19 @@
 
         <form class="needs-validation" novalidate>
             <div class="col-md-6 mb-3">
-                <label for="valid-first-name">First name</label>
+                <label for="valid-first-name">First name <span class="red">*</span></label>
                 <input type="text" class="form-control first-name" id="valid-first-name" required>
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please provide a valid first name.</div>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="valid-last-name">Last name</label>
+                <label for="valid-last-name">Last name <span class="red">*</span></label>
                 <input type="text" class="form-control last-name" id="valid-last-name" required>
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please provide a valid last name.</div>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="valid-email">Email</label>
+                <label for="valid-email">Email <span class="red">*</span></label>
                 <input type="text" class="form-control email" id="valid-email" required>
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Please provide a valid email.</div>
@@ -49,7 +49,7 @@
                 <input type="text" class="form-control address">
             </div>
             <div class="col-md-6 mb-3">
-                <input type="reset" value="Reset form" class="btn btn-outline-secondary">
+                <input class="btn btn-outline-secondary" onclick="reinicia()" type="reset" value="Reset form">
                 <button class="btn btn-outline-danger" onclick="validade()" type="button">Submit form</button>
             </div>
         </form>

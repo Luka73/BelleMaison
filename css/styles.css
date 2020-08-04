@@ -58,3 +58,12 @@ article a {
 .clear{
   clear: both;
 }
+
+.red{
+  color: red;
+}
+
+.redfort{
+  color: rgb(139, 51, 51);
+  text-decoration: underline;
+}
