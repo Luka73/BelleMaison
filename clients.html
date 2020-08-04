@@ -24,25 +24,53 @@
 
        <h3>Client Informations</h3>
        <hr>
-        <form id="form">
-            <label>First Name: </label>
-            <input type="text" name="first-name" class="form-control col-md-4">
-            <label>Last Name: </label>
-            <input type="text" name="last-name" class="form-control col-md-4">
-            <label>E-mail: </label>
-            <input type="email" name="email" class="form-control col-md-4">
-            <label>Address: </label>
-            <input type="text" name="address" class="form-control col-md-4">
-            <br>
-            <input type="button" onclick="clear()" value="Reset form" class="btn btn-outline-secondary">
-            <input type="submit" value="Send" class="btn btn-outline-danger">
-        </form><br>
-        <div class="clear">
+
+        <form class="needs-validation" novalidate>
+            <div class="col-md-6 mb-3">
+                <label for="valid-first-name">First name</label>
+                <input type="text" class="form-control first-name" id="valid-first-name" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid first name.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="valid-last-name">Last name</label>
+                <input type="text" class="form-control last-name" id="valid-last-name" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid last name.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="valid-email">Email</label>
+                <input type="text" class="form-control email" id="valid-email" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Address</label>
+                <input type="text" class="form-control address">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="reset" value="Reset form" class="btn btn-outline-secondary">
+                <button class="btn btn-outline-danger" onclick="validade()" type="button">Submit form</button>
+            </div>
+        </form>
+
+        <div class="alert alert-success" hidden role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <br>
+        <div class="clear col-md-6 mb-3">
             <button class="btn btn-outline-primary"><a class="link" href="index.html">Back Home</a></button>
         </div>
         <footer id="rodape">
             Belle Maison - All rigths reserved
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
