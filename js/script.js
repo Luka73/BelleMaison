@@ -61,8 +61,10 @@ function loanAmount() {
   var monthly = (monthlyPayment * 100) / 100.0;
   var total = (totalPayment * 100) / 100.0;
  
-  $('#monthly').val(monthly.toFixed(2));
-  $('#total').val(total.toFixed(2));
+  if(monthly != null && total != null) {
+    $('#monthly').val(monthly.toFixed(2));
+    $('#total').val(total.toFixed(2));
+  }
 
 }
 
