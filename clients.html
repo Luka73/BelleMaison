@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Belle Maison</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" alt="Belle Maison">
+            </div>
+            <nav id="menu">
+                <a href="index.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="clients.html">Clients</a>
+                <a href="loan-calculation.html">Loan Calculation</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+       <h3>Client Informations</h3>
+       <hr>
+        <form action="gravar.php" method="post" id="form">
+            <label>First Name: </label>
+            <input type="text" name="first-name" class="form-control col-md-4">
+            <label>Last Name: </label>
+            <input type="text" name="last-name" class="form-control col-md-4">
+            <label>E-mail: </label>
+            <input type="email" name="email" class="form-control col-md-4">
+            <label>Address: </label>
+            <input type="text" name="address" class="form-control col-md-4">
+            <br>
+            <input type="button" onclick="clear()" value="Reset form" class="btn btn-outline-secondary">
+            <input type="submit" value="Send" class="btn btn-outline-danger">
+        </form><br>
+        <div class="clear">
+            <button class="btn btn-outline-primary"><a class="link" href="index.html">Back Home</a></button>
+        </div>
+        <footer id="rodape">
+            Belle Maison - All rigths reserved
+        </footer>
+    </div>
+</body>
+</html>

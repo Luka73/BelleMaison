@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#app {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#logo {
+  float: left;
+}
+
+#menu {
+  float: right;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #a30a0d;
+  margin-left: 50px;
+  line-height: 75px;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 75px;
+  margin: 30px 0;
+}
+
+#banner img{
+  width: 1000px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  font-size: 15px;
+  color: #a30a0d;
+  margin: 20px 0;
+}
+
+h2,
+article a {
+  color: #a30a0d;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.clear{
+  clear: both;
+}

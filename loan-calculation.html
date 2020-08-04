@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Belle Maison</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" alt="Belle Maison">
+            </div>
+            <nav id="menu">
+                <a href="index.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="clients.html">Clients</a>
+                <a href="loan-calculation.html">Loan Calculation</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+       <h3>Loan Calculation</h3>
+       <hr>
+        <form action="gravar.php" method="post" id="form">
+            <label>Propertie type: </label>
+            <select name="propertie" id="" class="form-control col-md-4">
+                <option value="house">House</option>
+                <option value="house">Condo</option>
+                <option value="house">Duplex</option>
+            </select>
+            <label>Loan amount: </label>
+            <input type="text" name="amount" class="form-control col-md-4">
+            <label>Number of years: </label>
+            <input type="text" name="years" class="form-control col-md-4">
+            <label>Interest rate: </label>
+            <input type="email" name="rate" class="form-control col-md-4">
+            <label>Monthly Payment: </label>
+            <input type="text" name="monthly" class="form-control col-md-4">
+            <label>Total Payment: </label>
+            <input type="text" name="senha" class="form-control col-md-4">
+            <br>
+            <input type="button" onclick="clear()" value="Reset form" class="btn btn-outline-secondary">
+            <input type="submit" value="Send" class="btn btn-outline-danger">
+        </form><br>
+        <div class="clear">
+            <button class="btn btn-outline-primary"><a class="link" href="index.html">Back Home</a></button>
+        </div>
+        <footer id="rodape">
+            Belle Maison - All rigths reserved
+        </footer>
+    </div>
+</body>
+</html>
