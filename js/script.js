@@ -22,8 +22,9 @@ function validade() {
       var address = $(".address").val();
       var alert =  $('.alert');
 
-      var msg = 'First Name: ' + firstName + ' Last Name: ' + lastName+ 'Email:' + email +
-      ' Address : ' + address + '. Confirmed Client added ';
+      var requiredFields = 'First Name: ' + firstName + ' Last Name: ' + lastName+ 'Email:' + email;
+      var addressField = (address) ? ' Address : ' + address : "";
+      var msg = requiredFields + addressField + '. Confirmed Client added ';
       alert.text(msg);
       alert.removeAttr("hidden");
     }
