@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  console.log('oi');
+  console.log(getDateTime());
+  $('#date').text(getDateTime());
   var selectedClass = "1";
   $("#gallery").show();
   $("#gallery div").not("."+selectedClass).hide().removeClass('animation');
@@ -18,20 +21,25 @@ $('.carousel').carousel({
     interval: 1800
 });
 
-
 function validade() {
   var form = document.getElementsByClassName('needs-validation')[0];
   if(!form.checkValidity()) {
+    console.log('erro');
     event.preventDefault();
     event.stopPropagation();
   } else {
+    console.log('valido');
     var requiredFields = 'First Name: ' + $(".first-name").val() + ' Last Name: ' 
                           + $(".last-name").val()+ ' Email:' + $(".email").val();
-    var addressField = ($(".address").val()) ? ' Address : ' + $(".address").val() : "";
-    var msg = requiredFields + addressField + '. Confirmed Client added ';
+    var addressField = ($(".address").val() != "") ? ' Address : ' + $(".address").val() : "";
+    var texto = requiredFields + addressField + '. Confirmed Client added ';
 
-    $('.alert').text(msg);
-    $('.alert').removeAttr("hidden"); 
+    console.log(requiredFields);
+    console.log(addressField);
+    console.log(texto);
+
+    $('#alert').text(texto);
+    $('#alert').removeClass("d-none"); 
   }
   
   form.classList.add('was-validated');  
@@ -40,7 +48,7 @@ function validade() {
 function reinicia() {
   var form = document.getElementsByClassName('needs-validation')[0];
   form.classList.remove('was-validated');
-  $('.alert').hide();
+  $('#alert').hide();
 }
 
 
@@ -78,3 +86,14 @@ function validLoan() {
   form.classList.add('was-validated');
   loanAmount();  
 }
+
+function getDateTime() {
+  n =  new Date();
+  y = n.getFullYear();
+  m = n.getMonth() + 1;
+  d = n.getDate();
+  return "Today: " + m + "/" + d + "/" + y;
+}
+
+
+
