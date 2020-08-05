@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log('oi');
-  console.log(getDateTime());
   $('#date').text(getDateTime());
   var selectedClass = "1";
   $("#gallery").show();
