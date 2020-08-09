@@ -3,7 +3,10 @@ function getDateTime() {
   y = n.getFullYear();
   m = n.getMonth() + 1;
   d = n.getDate();
-  return "Today: " + m + "/" + d + "/" + y;
+  h = n.getHours();
+  mi = n.getMinutes();
+  s = n.getSeconds();
+  return "Today: " + m + "/" + d + "/" + y + " - " + h + ":" + mi + ":" + s;
 }
 
 $('.carousel').carousel({
@@ -13,7 +16,6 @@ $('.carousel').carousel({
 function validade() {
   var form = document.getElementsByClassName('needs-validation')[0];
   if(!form.checkValidity()) {
-    console.log('Não validado!');
     event.preventDefault();
     event.stopPropagation();
     $('#alert').addClass("d-none");  
